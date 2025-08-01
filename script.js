@@ -27,11 +27,8 @@ const changeSentence = () => {
 
 //Prints the sentence on the screen
 button.addEventListener("click", () => {
-    sentenceContainer.innerHTML = `<h1>${changeSentence()}</h1>`;
+    sentenceContainer.innerHTML = `<h3>${changeSentence()}</h3>`;
 })
 
-form.addEventListener("submit", (elem) => {
-    elem.preventDefault()
-})
 
 
