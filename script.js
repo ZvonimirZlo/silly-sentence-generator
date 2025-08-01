@@ -1,32 +1,37 @@
+//Variables
+const button = document.getElementById("btn");
+const sentenceContainer = document.getElementById("cont");
+const form = document.getElementById("form");
+
 //Arrays of possible sentence inputs
-const national = ["American", "English", "German", "Croatian", "Australian"];
-const fruits = ["bananas", "apples", "oranges", "lemons"];
-const animals = ["rabbits", "cats", "goats", "snails","dragons"];
-const bands = ['Rolling Stones', 'Metallica', 'AC/DC', 'Rammstein'];
-const companies = ["Microsoft", "Google", "Apple", "McDonald's"];
+const nation = ["American", "English", "German", "Croatian", "Australian", "Hungarian", "Canadian"];
+const fruits = ["bananas", "apples", "oranges", "lemons", "watermelons", "papayas"];
+const animals = ["rabbits", "cats", "goats", "snails", "dragons", "cows", "aligators", "bears"];
+const bands = ["Rolling Stones", "Metallica", "AC/DC", "Rammstein", "Iron Maiden", "Black Sabbath", "Slayer"];
+const companies = ["Microsoft", "Google", "Apple", "McDonald's", "Amazon", "NVIDIA", "Netflix"];
+
+//Sentence generator function
+const changeSentence = () => {
+
+    //Picks random strings from arrays
+    const nationStr = nation[Math.floor(Math.random() * nation.length)];
+    const fruitStr = fruits[Math.floor(Math.random() * fruits.length)];
+    const animalStr = animals[Math.floor(Math.random() * animals.length)];
+    const bandStr = bands[Math.floor(Math.random() * bands.length)];
+    const companyStr = companies[Math.floor(Math.random() * companies.length)];
+
+    //Final sentence
+    return `Nobody Expects the ${nationStr} Inquisition!!! Our four weapons are ${fruitStr}, ${animalStr}, ${bandStr}, and an almost fanatical devotion to ${companyStr}.`;
+}
 
 
-//extracts random words from arrays
-let nat = national[Math.floor(Math.random() * national.length)];
-let fru = fruits[Math.floor(Math.random() * fruits.length)];
-let ani = animals[Math.floor(Math.random() * animals.length)];
-let ban = bands[Math.floor(Math.random() * bands.length)];
-let com = companies[Math.floor(Math.random() * companies.length)];
+//Prints the sentence on the screen
+button.addEventListener("click", () => {
+    sentenceContainer.innerHTML = `<h1>${changeSentence()}</h1>`;
+})
 
-//final sentence
-let sentence = `Nobody Expects the ${nat} Inquisition!!! Our four weapons are ${fru}, ${ani}, ${ban}, and an almost fanatical devotion to ${com}.`
-
-const btn = document.getElementById('btn');
-let cont = document.getElementById('cont');
-
-//prints the sentence on the screen
-btn.addEventListener('click', () => {
-    let text = document.createElement('h1');
-    text.innerHTML = sentence;
-    cont.appendChild(text);
+form.addEventListener("submit", (elem) => {
+    elem.preventDefault()
 })
 
 
-
-
-//console.log(sentence);
