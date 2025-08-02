@@ -10,18 +10,17 @@ const animals = ["rabbits", "cats", "goats", "snails", "dragons", "cows", "aliga
 const bands = ["Rolling Stones", "Metallica", "AC/DC", "Rammstein", "Iron Maiden", "Black Sabbath", "Slayer"];
 const companies = ["Microsoft", "Google", "Apple", "McDonald's", "Amazon", "NVIDIA", "Netflix"];
 
+//Returns random item from the array
+const randomizer = (arr) => {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+
 //Sentence generator function
 const changeSentence = () => {
 
-    //Picks random strings from arrays
-    const nationStr = nation[Math.floor(Math.random() * nation.length)];
-    const fruitStr = fruits[Math.floor(Math.random() * fruits.length)];
-    const animalStr = animals[Math.floor(Math.random() * animals.length)];
-    const bandStr = bands[Math.floor(Math.random() * bands.length)];
-    const companyStr = companies[Math.floor(Math.random() * companies.length)];
-
-    //Final sentence
-    return `Nobody Expects the ${nationStr} Inquisition!!! Our four weapons are ${fruitStr}, ${animalStr}, ${bandStr}, and an almost fanatical devotion to ${companyStr}. <br> <span>~Monty Python~</span>`;
+//Final sentence
+    return `Nobody Expects the ${randomizer(nation)} Inquisition!!! Our four weapons are ${randomizer(fruits)}, ${randomizer(animals)}, ${randomizer(bands)}, and an almost fanatical devotion to ${randomizer(companies)}.`;
 }
 
 
