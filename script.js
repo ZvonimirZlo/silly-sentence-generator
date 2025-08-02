@@ -21,7 +21,7 @@ const changeSentence = () => {
     const companyStr = companies[Math.floor(Math.random() * companies.length)];
 
     //Final sentence
-    return `Nobody Expects the ${nationStr} Inquisition!!! Our four weapons are ${fruitStr}, ${animalStr}, ${bandStr}, and an almost fanatical devotion to ${companyStr}.`;
+    return `Nobody Expects the ${nationStr} Inquisition!!! Our four weapons are ${fruitStr}, ${animalStr}, ${bandStr}, and an almost fanatical devotion to ${companyStr}. <br> <span>~Monty Python~</span>`;
 }
 
 

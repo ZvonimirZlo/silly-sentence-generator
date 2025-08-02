@@ -1,3 +1,7 @@
+:root{
+    --footerColor: navy;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,22 +13,55 @@ body {
     justify-content: center;
     flex-direction: column;
     background: url(MontyPython.jpg) center no-repeat fixed;
+    background-size: 100% 100%;
 }
 
 .container {
-    border: 1px solid black;
-    width: 30%;
-    height: 200px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-self: unset;
-    padding: 10px;
-    background: wheat;
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.8em;
+  height: 100px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: wheat;
+  padding: 10px;
+  max-width: 95%;
 }
 
 .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 12%;
+}
+
+#btn {
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    background-color: rgb(240, 236, 47);
+    border: 2px solid blue;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+#btn:hover {
+    zoom:1.1;
+    color: var(--footerColor);
+}
+
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--footerColor);
+    font-size: 15px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 2.5rem;
 }
