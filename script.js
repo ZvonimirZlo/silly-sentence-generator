@@ -5,8 +5,8 @@ const form = document.getElementById("form");
 
 //Arrays of possible sentence inputs
 const nation = ["American", "English", "German", "Croatian", "Australian", "Hungarian", "Canadian"];
-const fruits = ["bananas", "apples", "oranges", "lemons", "watermelons", "papayas"];
-const animals = ["rabbits", "cats", "goats", "snails", "dragons", "cows", "aligators", "bears"];
+const fruits = ["Bananas", "Apples", "Oranges", "Lemons", "Watermelons", "Papayas"];
+const animals = ["Rabbits", "Cats", "Goats", "Snails", "Dragons", "Cows", "Aligators", "Bears"];
 const bands = ["Rolling Stones", "Metallica", "AC/DC", "Rammstein", "Iron Maiden", "Black Sabbath", "Slayer"];
 const companies = ["Microsoft", "Google", "Apple", "McDonald's", "Amazon", "NVIDIA", "Netflix"];
 
@@ -20,7 +20,7 @@ const randomizer = (arr) => {
 const changeSentence = () => {
 
 //Final sentence
-    return `Nobody Expects the ${randomizer(nation)} Inquisition!!! Our four weapons are ${randomizer(fruits)}, ${randomizer(animals)}, ${randomizer(bands)}, and an almost fanatical devotion to ${randomizer(companies)}.`;
+    return `NOBODY Expects the ${randomizer(nation)} Inquisition!!! Our four weapons are ${randomizer(fruits)}, ${randomizer(animals)}, ${randomizer(bands)}, and an almost fanatical devotion to ${randomizer(companies)}.`;
 }
 
 
